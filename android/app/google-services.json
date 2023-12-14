@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "861453962707",
+    "project_id": "sportopia-nxt5al",
+    "storage_bucket": "sportopia-nxt5al.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861453962707:android:32fc136b367921997c3326",
+        "android_client_info": {
+          "package_name": "com.ulogicit.sportopia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARo3n3VC8UPtneyodIEvJ40-Z2Xh35ldM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
