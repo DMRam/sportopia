@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
+import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
@@ -71,16 +72,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => appStateNotifier.loggedIn
-          ? const PlayerDashboardWidget()
-          : const LoginScreenWidget(),
+      errorBuilder: (context, state) =>
+          appStateNotifier.loggedIn ? const NavBarPage() : const LoginScreenWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn
-              ? const PlayerDashboardWidget()
-              : const LoginScreenWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? const NavBarPage() : const LoginScreenWidget(),
         ),
         FFRoute(
           name: 'LoginScreen',
@@ -90,7 +89,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'PlayerDashboard',
           path: '/playerDashboard',
-          builder: (context, params) => const PlayerDashboardWidget(),
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'PlayerDashboard')
+              : const PlayerDashboardWidget(),
         ),
         FFRoute(
           name: 'CreateAccountScreen',
@@ -98,9 +99,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const CreateAccountScreenWidget(),
         ),
         FFRoute(
-          name: 'ProfileSettings',
-          path: '/profileSettings',
-          builder: (context, params) => const ProfileSettingsWidget(),
+          name: 'PlayerProfile',
+          path: '/playerProfile',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'PlayerProfile')
+              : const PlayerProfileWidget(),
         ),
         FFRoute(
           name: 'OrganizerProfile',
@@ -111,6 +114,42 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'OrganizerDashboard',
           path: '/organizerDashboard',
           builder: (context, params) => const OrganizerDashboardWidget(),
+        ),
+        FFRoute(
+          name: 'PlayerGame',
+          path: '/playerGame',
+          builder: (context, params) => const PlayerGameWidget(),
+        ),
+        FFRoute(
+          name: 'PlayerTournaments',
+          path: '/playerTournaments',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'PlayerTournaments')
+              : const PlayerTournamentsWidget(),
+        ),
+        FFRoute(
+          name: 'PlayerChallenges',
+          path: '/playerChallenges',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'PlayerChallenges')
+              : const PlayerChallengesWidget(),
+        ),
+        FFRoute(
+          name: 'PlayerStore',
+          path: '/playerStore',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'PlayerStore')
+              : const PlayerStoreWidget(),
+        ),
+        FFRoute(
+          name: 'PlayerServStore',
+          path: '/playerServStore',
+          builder: (context, params) => const PlayerServStoreWidget(),
+        ),
+        FFRoute(
+          name: 'PlayerCatListSel',
+          path: '/playerCatListSel',
+          builder: (context, params) => const PlayerCatListSelWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -309,13 +348,20 @@ class FFRoute {
                   key: state.pageKey,
                   child: child,
                   transitionDuration: transitionInfo.duration,
-                  transitionsBuilder: PageTransition(
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) =>
+                          PageTransition(
                     type: transitionInfo.transitionType,
                     duration: transitionInfo.duration,
                     reverseDuration: transitionInfo.duration,
                     alignment: transitionInfo.alignment,
                     child: child,
-                  ).transitionsBuilder,
+                  ).buildTransitions(
+                    context,
+                    animation,
+                    secondaryAnimation,
+                    child,
+                  ),
                 )
               : MaterialPage(key: state.pageKey, child: child);
         },

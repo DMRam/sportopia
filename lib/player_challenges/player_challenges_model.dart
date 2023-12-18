@@ -1,15 +1,11 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'player_dashboard_widget.dart' show PlayerDashboardWidget;
+import 'player_challenges_widget.dart' show PlayerChallengesWidget;
 import 'package:flutter/material.dart';
 
-class PlayerDashboardModel extends FlutterFlowModel<PlayerDashboardWidget> {
+class PlayerChallengesModel extends FlutterFlowModel<PlayerChallengesWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // State field(s) for TabBar widget.
-  TabController? tabBarController;
-  int get tabBarCurrentIndex =>
-      tabBarController != null ? tabBarController!.index : 0;
 
   /// Initialization and disposal methods.
 
@@ -19,7 +15,6 @@ class PlayerDashboardModel extends FlutterFlowModel<PlayerDashboardWidget> {
   @override
   void dispose() {
     unfocusNode.dispose();
-    tabBarController?.dispose();
   }
 
   /// Action blocks are added here.

@@ -1,15 +1,15 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'player_dashboard_widget.dart' show PlayerDashboardWidget;
+import '/flutter_flow/form_field_controller.dart';
+import 'player_cat_list_sel_widget.dart' show PlayerCatListSelWidget;
 import 'package:flutter/material.dart';
 
-class PlayerDashboardModel extends FlutterFlowModel<PlayerDashboardWidget> {
+class PlayerCatListSelModel extends FlutterFlowModel<PlayerCatListSelWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // State field(s) for TabBar widget.
-  TabController? tabBarController;
-  int get tabBarCurrentIndex =>
-      tabBarController != null ? tabBarController!.index : 0;
+  // State field(s) for ChoiceChips widget.
+  String? choiceChipsValue;
+  FormFieldController<List<String>>? choiceChipsValueController;
 
   /// Initialization and disposal methods.
 
@@ -19,7 +19,6 @@ class PlayerDashboardModel extends FlutterFlowModel<PlayerDashboardWidget> {
   @override
   void dispose() {
     unfocusNode.dispose();
-    tabBarController?.dispose();
   }
 
   /// Action blocks are added here.

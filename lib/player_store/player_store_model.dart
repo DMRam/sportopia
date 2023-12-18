@@ -1,11 +1,15 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'player_dashboard_widget.dart' show PlayerDashboardWidget;
+import 'player_store_widget.dart' show PlayerStoreWidget;
 import 'package:flutter/material.dart';
 
-class PlayerDashboardModel extends FlutterFlowModel<PlayerDashboardWidget> {
+class PlayerStoreModel extends FlutterFlowModel<PlayerStoreWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // State field(s) for searchBar widget.
+  FocusNode? searchBarFocusNode;
+  TextEditingController? searchBarController;
+  String? Function(BuildContext, String?)? searchBarControllerValidator;
   // State field(s) for TabBar widget.
   TabController? tabBarController;
   int get tabBarCurrentIndex =>
@@ -19,6 +23,9 @@ class PlayerDashboardModel extends FlutterFlowModel<PlayerDashboardWidget> {
   @override
   void dispose() {
     unfocusNode.dispose();
+    searchBarFocusNode?.dispose();
+    searchBarController?.dispose();
+
     tabBarController?.dispose();
   }
 

@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'profile_settings_widget.dart' show ProfileSettingsWidget;
+import 'player_profile_widget.dart' show PlayerProfileWidget;
 import 'package:flutter/material.dart';
 
-class ProfileSettingsModel extends FlutterFlowModel<ProfileSettingsWidget> {
+class PlayerProfileModel extends FlutterFlowModel<PlayerProfileWidget> {
   /// Initialization and disposal methods.
 
   @override

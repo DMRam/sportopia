@@ -164,7 +164,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
               children: [
                 Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(16.0, 44.0, 16.0, 12.0),
+                      const EdgeInsetsDirectional.fromSTEB(16.0, 50.0, 16.0, 12.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -175,8 +175,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                           borderRadius: BorderRadius.circular(40.0),
                         ),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              2.0, 2.0, 2.0, 2.0),
+                          padding: const EdgeInsets.all(2.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -184,7 +183,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                             highlightColor: Colors.transparent,
                             onTap: () async {
                               context.pushNamed(
-                                'ProfileSettings',
+                                'PlayerProfile',
                                 extra: <String, dynamic>{
                                   kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,
@@ -327,8 +326,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      12.0, 12.0, 12.0, 12.0),
+                                  padding: const EdgeInsets.all(12.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment:
@@ -345,7 +343,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                               BorderRadius.circular(12.0),
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.00, 0.00),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: const Icon(
                                           Icons.desktop_windows,
                                           color: Colors.white,
@@ -390,7 +388,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                         children: [
                                           Align(
                                             alignment: const AlignmentDirectional(
-                                                -0.91, 0.00),
+                                                -0.91, 0.0),
                                             child: Container(
                                               width: 28.0,
                                               height: 28.0,
@@ -406,7 +404,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                           ),
                                           Align(
                                             alignment: const AlignmentDirectional(
-                                                -0.62, 0.00),
+                                                -0.62, 0.0),
                                             child: Container(
                                               width: 28.0,
                                               height: 28.0,
@@ -422,7 +420,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                           ),
                                           Align(
                                             alignment: const AlignmentDirectional(
-                                                -0.35, 0.00),
+                                                -0.35, 0.0),
                                             child: Container(
                                               width: 28.0,
                                               height: 28.0,
@@ -490,8 +488,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      12.0, 12.0, 12.0, 12.0),
+                                  padding: const EdgeInsets.all(12.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment:
@@ -508,7 +505,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                               BorderRadius.circular(12.0),
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.00, 0.00),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: const Icon(
                                           Icons.design_services_outlined,
                                           color: Colors.white,
@@ -553,7 +550,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                         children: [
                                           Align(
                                             alignment: const AlignmentDirectional(
-                                                -0.91, 0.00),
+                                                -0.91, 0.0),
                                             child: Container(
                                               width: 28.0,
                                               height: 28.0,
@@ -569,7 +566,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                           ),
                                           Align(
                                             alignment: const AlignmentDirectional(
-                                                -0.62, 0.00),
+                                                -0.62, 0.0),
                                             child: Container(
                                               width: 28.0,
                                               height: 28.0,
@@ -585,7 +582,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                           ),
                                           Align(
                                             alignment: const AlignmentDirectional(
-                                                -0.35, 0.00),
+                                                -0.35, 0.0),
                                             child: Container(
                                               width: 28.0,
                                               height: 28.0,
@@ -715,9 +712,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                             ),
                                           ),
                                           child: Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    12.0, 12.0, 12.0, 12.0),
+                                            padding: const EdgeInsets.all(12.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:
@@ -798,7 +793,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                                       ),
                                                       alignment:
                                                           const AlignmentDirectional(
-                                                              0.00, 0.00),
+                                                              0.0, 0.0),
                                                       child: Text(
                                                         'In Progress',
                                                         style: FlutterFlowTheme
@@ -834,9 +829,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                           ),
                                         ),
                                         child: Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  12.0, 12.0, 12.0, 12.0),
+                                          padding: const EdgeInsets.all(12.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:
@@ -916,7 +909,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                                     ),
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: Text(
                                                       'In Progress',
                                                       style: FlutterFlowTheme
@@ -966,9 +959,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                             ),
                                           ),
                                           child: Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    12.0, 12.0, 12.0, 12.0),
+                                            padding: const EdgeInsets.all(12.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:
@@ -1049,7 +1040,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                                       ),
                                                       alignment:
                                                           const AlignmentDirectional(
-                                                              0.00, 0.00),
+                                                              0.0, 0.0),
                                                       child: Text(
                                                         'In Progress',
                                                         style: FlutterFlowTheme
@@ -1084,9 +1075,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                           ),
                                         ),
                                         child: Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  12.0, 12.0, 12.0, 12.0),
+                                          padding: const EdgeInsets.all(12.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:
@@ -1166,7 +1155,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                                     ),
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: Text(
                                                       'In Progress',
                                                       style: FlutterFlowTheme
@@ -1215,9 +1204,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                             ),
                                           ),
                                           child: Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    12.0, 12.0, 12.0, 12.0),
+                                            padding: const EdgeInsets.all(12.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:
@@ -1310,7 +1297,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                                       ),
                                                       alignment:
                                                           const AlignmentDirectional(
-                                                              0.00, 0.00),
+                                                              0.0, 0.0),
                                                       child: Text(
                                                         'Complete',
                                                         style:
@@ -1340,9 +1327,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                           ),
                                         ),
                                         child: Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  12.0, 12.0, 12.0, 12.0),
+                                          padding: const EdgeInsets.all(12.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:
@@ -1434,7 +1419,7 @@ class _OrganizerDashboardWidgetState extends State<OrganizerDashboardWidget>
                                                     ),
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: Text(
                                                       'Complete',
                                                       style:

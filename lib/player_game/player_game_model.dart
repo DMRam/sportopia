@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'player_dashboard_widget.dart' show PlayerDashboardWidget;
+import 'player_game_widget.dart' show PlayerGameWidget;
 import 'package:flutter/material.dart';
 
-class PlayerDashboardModel extends FlutterFlowModel<PlayerDashboardWidget> {
+class PlayerGameModel extends FlutterFlowModel<PlayerGameWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

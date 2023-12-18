@@ -5,25 +5,25 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'profile_settings_model.dart';
-export 'profile_settings_model.dart';
+import 'player_profile_model.dart';
+export 'player_profile_model.dart';
 
-class ProfileSettingsWidget extends StatefulWidget {
-  const ProfileSettingsWidget({super.key});
+class PlayerProfileWidget extends StatefulWidget {
+  const PlayerProfileWidget({super.key});
 
   @override
-  _ProfileSettingsWidgetState createState() => _ProfileSettingsWidgetState();
+  _PlayerProfileWidgetState createState() => _PlayerProfileWidgetState();
 }
 
-class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
-  late ProfileSettingsModel _model;
+class _PlayerProfileWidgetState extends State<PlayerProfileWidget> {
+  late PlayerProfileModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ProfileSettingsModel());
+    _model = createModel(context, () => PlayerProfileModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -50,10 +50,10 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        backgroundColor: const Color(0xA819DB8A),
         automaticallyImplyLeading: false,
         leading: Align(
-          alignment: const AlignmentDirectional(-1.00, 0.00),
+          alignment: const AlignmentDirectional(-1.0, 0.0),
           child: Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
             child: FlutterFlowIconButton(
@@ -71,18 +71,21 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
             ),
           ),
         ),
-        title: Text(
-          'Player Profile',
-          style: FlutterFlowTheme.of(context).displaySmall.override(
-                fontFamily: 'Inter',
-                color: FlutterFlowTheme.of(context).primaryText,
-                fontSize: 25.0,
-                fontWeight: FontWeight.bold,
-              ),
+        title: Padding(
+          padding: const EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
+          child: Text(
+            'Player Profile',
+            style: FlutterFlowTheme.of(context).displaySmall.override(
+                  fontFamily: 'Inter',
+                  color: FlutterFlowTheme.of(context).secondaryText,
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
         ),
         actions: [
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 16.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 26.0, 5.0),
             child: Container(
               width: 44.0,
               height: 44.0,
@@ -95,7 +98,7 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(2.0, 2.0, 2.0, 2.0),
+                padding: const EdgeInsets.all(2.0),
                 child: Container(
                   width: 50.0,
                   height: 50.0,
@@ -204,7 +207,7 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
                           ),
                           Expanded(
                             child: Align(
-                              alignment: const AlignmentDirectional(1.00, 0.00),
+                              alignment: const AlignmentDirectional(1.0, 0.0),
                               child: Icon(
                                 Icons.arrow_forward_ios,
                                 color:
@@ -238,31 +241,49 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
                 ),
                 child: Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Text(
-                            'Switch to Organizer',
-                            style: FlutterFlowTheme.of(context).bodyLarge,
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      context.pushNamed(
+                        'OrganizerDashboard',
+                        extra: <String, dynamic>{
+                          kTransitionInfoKey: const TransitionInfo(
+                            hasTransition: true,
+                            transitionType: PageTransitionType.bottomToTop,
+                            duration: Duration(milliseconds: 300),
                           ),
-                          Expanded(
-                            child: Align(
-                              alignment: const AlignmentDirectional(1.00, 0.00),
-                              child: Icon(
-                                Icons.arrow_forward_ios,
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                size: 20.0,
+                        },
+                      );
+                    },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Text(
+                              'Switch to Organizer',
+                              style: FlutterFlowTheme.of(context).bodyLarge,
+                            ),
+                            Expanded(
+                              child: Align(
+                                alignment: const AlignmentDirectional(1.0, 0.0),
+                                child: Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryText,
+                                  size: 20.0,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -308,7 +329,7 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
                               ),
                               Expanded(
                                 child: Align(
-                                  alignment: const AlignmentDirectional(1.00, 0.00),
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
                                   child: Icon(
                                     Icons.arrow_forward_ios,
                                     color: FlutterFlowTheme.of(context)
@@ -391,7 +412,7 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
                               ),
                               Expanded(
                                 child: Align(
-                                  alignment: const AlignmentDirectional(1.00, 0.00),
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
                                   child: Icon(
                                     Icons.arrow_forward_ios,
                                     color: FlutterFlowTheme.of(context)
@@ -446,7 +467,7 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
                           ),
                           Expanded(
                             child: Align(
-                              alignment: const AlignmentDirectional(1.00, 0.00),
+                              alignment: const AlignmentDirectional(1.0, 0.0),
                               child: Icon(
                                 Icons.arrow_forward_ios,
                                 color:
@@ -493,7 +514,7 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
                           ),
                           Expanded(
                             child: Align(
-                              alignment: const AlignmentDirectional(1.00, 0.00),
+                              alignment: const AlignmentDirectional(1.0, 0.0),
                               child: Icon(
                                 Icons.arrow_forward_ios,
                                 color:
@@ -527,7 +548,7 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      color: const Color(0xA819DB8A),
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
                           .override(
@@ -536,8 +557,8 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
                             fontWeight: FontWeight.w500,
                           ),
                       elevation: 0.0,
-                      borderSide: BorderSide(
-                        color: FlutterFlowTheme.of(context).alternate,
+                      borderSide: const BorderSide(
+                        color: Color(0x9159BDFF),
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(12.0),

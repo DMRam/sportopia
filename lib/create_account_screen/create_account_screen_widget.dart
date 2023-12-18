@@ -198,7 +198,7 @@ class _CreateAccountScreenWidgetState extends State<CreateAccountScreenWidget>
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Align(
-                      alignment: const AlignmentDirectional(-1.00, 0.00),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
@@ -255,7 +255,7 @@ class _CreateAccountScreenWidgetState extends State<CreateAccountScreenWidget>
               ),
             ),
             Align(
-              alignment: const AlignmentDirectional(0.00, 0.00),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 16.0),
                 child: Column(
@@ -306,8 +306,7 @@ class _CreateAccountScreenWidgetState extends State<CreateAccountScreenWidget>
                             filled: true,
                             fillColor: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                24.0, 24.0, 24.0, 24.0),
+                            contentPadding: const EdgeInsets.all(24.0),
                           ),
                           style: FlutterFlowTheme.of(context).bodyMedium,
                           validator: _model.nameControllerValidator
@@ -359,8 +358,7 @@ class _CreateAccountScreenWidgetState extends State<CreateAccountScreenWidget>
                             filled: true,
                             fillColor: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                24.0, 24.0, 24.0, 24.0),
+                            contentPadding: const EdgeInsets.all(24.0),
                           ),
                           style: FlutterFlowTheme.of(context).bodyMedium,
                           validator: _model.lastNameControllerValidator
@@ -414,8 +412,7 @@ class _CreateAccountScreenWidgetState extends State<CreateAccountScreenWidget>
                             filled: true,
                             fillColor: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                24.0, 24.0, 24.0, 24.0),
+                            contentPadding: const EdgeInsets.all(24.0),
                           ),
                           style: FlutterFlowTheme.of(context).bodyMedium,
                           keyboardType: TextInputType.emailAddress,
@@ -469,8 +466,7 @@ class _CreateAccountScreenWidgetState extends State<CreateAccountScreenWidget>
                             filled: true,
                             fillColor: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                24.0, 24.0, 24.0, 24.0),
+                            contentPadding: const EdgeInsets.all(24.0),
                             suffixIcon: InkWell(
                               onTap: () => setState(
                                 () => _model.passwordVisibility =
@@ -537,8 +533,7 @@ class _CreateAccountScreenWidgetState extends State<CreateAccountScreenWidget>
                             filled: true,
                             fillColor: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                24.0, 24.0, 24.0, 24.0),
+                            contentPadding: const EdgeInsets.all(24.0),
                             suffixIcon: InkWell(
                               onTap: () => setState(
                                 () => _model.confirmPasswordVisibility =
@@ -562,7 +557,7 @@ class _CreateAccountScreenWidgetState extends State<CreateAccountScreenWidget>
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.00, 0.00),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
